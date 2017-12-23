@@ -27,5 +27,10 @@ public class stepdefinitions {
         // Write code here that turns the phrase above into concrete actions
         System.out.println("#4");
     }
+    @Then("^display division$")
+    public void display_division() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        System.out.println("#5");
+    }
 
 }
