@@ -5,6 +5,9 @@ apply plugin: 'java'
 
 sourceCompatibility = 1.8
 
+ext.systemProperties= System.properties
+
+
 repositories {
     mavenCentral()
 }
@@ -21,7 +24,6 @@ task cucumber() {
     dependsOn assemble, compileTestJava
 
 
-    ext.systemProperties= System.properties
     println "System property FOO is ${systemProperties.FOO}"
 
     doLast {
@@ -32,6 +34,7 @@ task cucumber() {
             //args = ['--plugin', 'pretty', '--glue', 'stepdefinitions', 'src/test']
             //args = ['--plugin', 'pretty', '--glue', 'stepdefinitions', 'src/test/resources/AA']
             //jvmArgs = ["-Dcucumber.options=" + options]
+            println "System property FOO is ${systemProperties.FOO}"
             jvmArgs = ["-Dcucumber.options=" + "--tags @Mul"]
             //println "Only Add"
             //args = ['--plugin', 'pretty', '--glue', 'stepdefinitions', 'src/test','--tags','@Division_AA']
@@ -46,8 +49,8 @@ task cucumber() {
 test {
     jvmArgs = ["-Dcucumber.options=" + "--tags @Mul"]
    // args = ['--plugin', 'pretty', '--glue', 'stepdefinitions', 'src/test']
-    println systemProperties["FOO"]
 
+    println "System property FOO is ${systemProperties.FOO}"
 
     afterTest { desc, result ->
         logger.quiet "Executing test ${desc.name} [${desc.className}] with result: ${result.resultType}"
