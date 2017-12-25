@@ -27,6 +27,7 @@ public class stepdefinitions {
         System.out.println("Sum #3");
         c = a+b;
         System.out.println("Sum : "+c);
+
     }
 
     @Then("^display multiplication$")

@@ -36,6 +36,12 @@ task cucumber() {
     }
 }
 
+test {
+    afterTest { desc, result ->
+        logger.quiet "Executing test ${desc.name} [${desc.className}] with result: ${result.resultType}"
+    }
+}
+
 dependencies {
 
     testCompile files('./src/test/dependency_lib/cobertura-2.1.1.jar')
