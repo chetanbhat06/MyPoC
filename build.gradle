@@ -45,7 +45,7 @@ task cucumber() {
 }
 
 test {
-    jvmArgs = ["-Dcucumber.options=" + "--tags @add"]
+    jvmArgs = ["-Dcucumber.options=" + "--tags @Mul"]
    // args = ['--plugin', 'pretty', '--glue', 'stepdefinitions', 'src/test']
 
     afterTest { desc, result ->
