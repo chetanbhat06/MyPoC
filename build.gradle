@@ -23,7 +23,8 @@ task cucumber() {
 
     ext.systemProperties= System.properties
     println "System property FOO is ${systemProperties.FOO}"
-    println $FOO
+    println "FOO: ${getProjectProperty('FOO')}"
+
     doLast {
         javaexec {
             main = "cucumber.api.cli.Main"
