@@ -22,9 +22,8 @@ task cucumber() {
 
 
     ext.systemProperties= System.properties
-   //println "System property FOO is ${systemProperties.mytags}"
-    println "My Jenkins Param :${System.getProperty("mytag")}"
-
+    println "System property FOO is ${systemProperties.FOO}"
+    
     doLast {
         javaexec {
             main = "cucumber.api.cli.Main"
