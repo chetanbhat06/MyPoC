@@ -23,7 +23,6 @@ task cucumber() {
 
     ext.systemProperties= System.properties
     println "System property FOO is ${systemProperties.FOO}"
-    println "FOO: ${getProjectProperty('FOO')}"
 
     doLast {
         javaexec {
@@ -47,6 +46,8 @@ task cucumber() {
 test {
     jvmArgs = ["-Dcucumber.options=" + "--tags @Mul"]
    // args = ['--plugin', 'pretty', '--glue', 'stepdefinitions', 'src/test']
+    println systemProperties["FOO"]
+
 
     afterTest { desc, result ->
         logger.quiet "Executing test ${desc.name} [${desc.className}] with result: ${result.resultType}"
