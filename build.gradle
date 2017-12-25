@@ -33,8 +33,8 @@ task cucumber() {
             //args = ['--plugin', 'pretty', '--glue', 'stepdefinitions', 'src/test']
             //args = ['--plugin', 'pretty', '--glue', 'stepdefinitions', 'src/test/resources/AA']
             //jvmArgs = ["-Dcucumber.options=" + options]
-           // jvmArgs = ["-Dcucumber.options=" + "--tags @add"]
-            println "Only Add"
+            jvmArgs = ["-Dcucumber.options=" + "--tags @Mul"]
+            //println "Only Add"
             //args = ['--plugin', 'pretty', '--glue', 'stepdefinitions', 'src/test','--tags','@Division_AA']
             //args = ['--plugin', 'pretty', '--glue', 'stepdefinitions', 'src/test']
            args = ['--plugin', 'pretty', '--glue', 'stepdefinitions', 'src/test']
