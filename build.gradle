@@ -37,7 +37,7 @@ task cucumber() {
             println "Only Add"
             //args = ['--plugin', 'pretty', '--glue', 'stepdefinitions', 'src/test','--tags','@Division_AA']
             //args = ['--plugin', 'pretty', '--glue', 'stepdefinitions', 'src/test']
-          // args = ['--plugin', 'pretty', '--glue', 'stepdefinitions', 'src/test']
+           args = ['--plugin', 'pretty', '--glue', 'stepdefinitions', 'src/test']
            // System.getProperty("mytag")
 
         }
@@ -46,7 +46,7 @@ task cucumber() {
 
 test {
     jvmArgs = ["-Dcucumber.options=" + "--tags @add"]
-    args = ['--plugin', 'pretty', '--glue', 'stepdefinitions', 'src/test']
+   // args = ['--plugin', 'pretty', '--glue', 'stepdefinitions', 'src/test']
 
     afterTest { desc, result ->
         logger.quiet "Executing test ${desc.name} [${desc.className}] with result: ${result.resultType}"
