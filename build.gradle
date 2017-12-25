@@ -34,7 +34,7 @@ task cucumber() {
             //args = ['--plugin', 'pretty', '--glue', 'stepdefinitions', 'src/test/resources/AA']
             System.getProperty("mytag")
             println "My Jenkins Param "$ System.getProperty("mytag")
-            args = ['--plugin', 'pretty', '--glue', 'stepdefinitions', 'src/test']
+            //args = ['--plugin', 'pretty', '--glue', 'stepdefinitions', 'src/test']
            // System.getProperty("mytag")
         }
     }
