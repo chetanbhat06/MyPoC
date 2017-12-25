@@ -30,7 +30,7 @@ task cucumber() {
             classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
            // args = ['--plugin', 'pretty', '--glue', 'stepdefinitions', 'src/test/resources']
             //args = ['--plugin', 'pretty', '--glue', 'stepdefinitions', 'src/test']
-            args = ['--plugin', 'pretty', '--glue', 'stepdefinitions', 'src/test', '-Dcucumber.options="--tags @Add"']
+            args = ['--plugin', 'pretty', '--glue', 'stepdefinitions', 'src/test/resources/AA']
 
         }
     }
