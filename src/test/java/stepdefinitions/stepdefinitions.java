@@ -17,7 +17,7 @@ public class stepdefinitions {
         FileWriter writer = new FileWriter("MyFile.txt", true);
         writer.write("I have a");
         writer.write("\r\n");   // write new line
-
+        writer.close();
     }
 
     @When("^I have b$")
@@ -29,6 +29,7 @@ public class stepdefinitions {
         FileWriter writer = new FileWriter("MyFile.txt", true);
         writer.write("I have b");
         writer.write("\r\n");   // write new line
+        writer.close();
     }
 
     @Then("^display sum$")
@@ -41,7 +42,7 @@ public class stepdefinitions {
         FileWriter writer = new FileWriter("MyFile.txt", true);
         writer.write("I have Sum");
         writer.write("\r\n");   // write new line
-
+        writer.close();
     }
 
     @Then("^display multiplication$")
@@ -54,6 +55,7 @@ public class stepdefinitions {
         FileWriter writer = new FileWriter("MyFile.txt", true);
         writer.write("I have Multiplication");
         writer.write("\r\n");   // write new line
+        writer.close();
     }
     @Then("^display division$")
     public void display_division() throws Throwable {
@@ -65,6 +67,7 @@ public class stepdefinitions {
         FileWriter writer = new FileWriter("MyFile.txt", true);
         writer.write("I have Division");
         writer.write("\r\n");   // write new line
+        writer.close();
     }
 
 }
